@@ -1,0 +1,24 @@
+.digit {
+  display: inline-block;
+  height: 10%;
+  width: 10%;
+  background-color: green;
+  color: white;
+  margin: 3%;
+}
+.operation {
+  display: inline-block;
+  height: 10%;
+  width: 10%;
+  background-color: red;
+  color: white;
+  margin: 3%;
+}
+#equals {
+  display: inline-block;
+  height: 10%;
+  width: 10%;
+  background-color: red;
+  color: white;
+  margin: 3%;
+}
