@@ -22,3 +22,19 @@
   color: white;
   margin: 3%;
 }
+#point {
+  display: inline-block;
+  height: 10%;
+  width: 10%;
+  background-color: green;
+  color: white;
+  margin: 3%;
+}
+.display {
+  display: block;
+  height: 10%;
+  width: 25%;
+  background-color: black;
+  color: white;
+  margin: 3%;
+}
