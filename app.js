@@ -48,23 +48,36 @@ document.getElementById('point').addEventListener('click', function(event) {
 document.getElementById('toggle').addEventListener('click', function(event) {
       if (parseFloat(number) > 0){
         number = '-'+number;
-        //change the next bit
-        document.getElementById('input').appendChild(document.createTextNode('negative'))
+          if (document.getElementsByClassName('op').length>0) {
+            document.getElementsByClassName('op')[document.getElementsByClassName('op')
+            .length-1].appendChild(document.createTextNode('-'));
+          }
+          else {
+            document.getElementById('input').insertBefore(document.createTextNode('-'),
+            document.getElementById('input').firstChild);
+          }
       }
       else if (parseFloat(number) < 0) {
         number = number.slice(1);
-        //change the next bit
-        document.getElementById('input').appendChild(document.createTextNode('positive'))
+        if (document.getElementsByClassName('op').length>0) {
+          document.getElementsByClassName('op')[document.getElementsByClassName('op')
+          .length-1].removeChild(document.getElementsByClassName('op')[document.getElementsByClassName('op')
+          .length-1].lastChild);
+        }
+        else {
+          document.getElementById('input').removeChild(document.getElementById('input').firstChild);
+        }
       }
-      //number+='.';
-      //document.getElementById('input').appendChild(document.createTextNode('.'));
     }, false);
 
 document.getElementById('plus').addEventListener('click', function(event) {
   if (number){
       calculation.push(parseFloat(number));
       calculation.push('+');
-      document.getElementById('input').appendChild(document.createTextNode("+"));
+      document.getElementById('input').appendChild(document.createElement('span'));
+      document.getElementById('input').lastChild.classList.add('op');
+      document.getElementsByClassName('op')[document.getElementsByClassName('op')
+        .length-1].appendChild(document.createTextNode('+'));
       number = '';
       }
   }, false);
@@ -72,7 +85,10 @@ document.getElementById('minus').addEventListener('click', function(event) {
   if (number){
       calculation.push(parseFloat(number));
       calculation.push('-');
-      document.getElementById('input').appendChild(document.createTextNode("-"));
+      document.getElementById('input').appendChild(document.createElement('span'));
+      document.getElementById('input').lastChild.classList.add('op');
+      document.getElementsByClassName('op')[document.getElementsByClassName('op')
+        .length-1].appendChild(document.createTextNode('-'));
       number = '';
       }
   }, false);
@@ -80,7 +96,10 @@ document.getElementById('multiply').addEventListener('click', function(event) {
   if (number){
       calculation.push(parseFloat(number));
       calculation.push('*');
-      document.getElementById('input').appendChild(document.createTextNode("x"));
+      document.getElementById('input').appendChild(document.createElement('span'));
+      document.getElementById('input').lastChild.classList.add('op');
+      document.getElementsByClassName('op')[document.getElementsByClassName('op')
+        .length-1].appendChild(document.createTextNode('x'));
       number = '';
       }
   }, false);
@@ -88,7 +107,10 @@ document.getElementById('divide').addEventListener('click', function(event) {
   if (number){
       calculation.push(parseFloat(number));
       calculation.push('/');
-      document.getElementById('input').appendChild(document.createTextNode('\u00f7'));
+      document.getElementById('input').appendChild(document.createElement('span'));
+      document.getElementById('input').lastChild.classList.add('op');
+      document.getElementsByClassName('op')[document.getElementsByClassName('op')
+        .length-1].appendChild(document.createTextNode('\u00f7'));
       number = '';
       }
   }, false);
