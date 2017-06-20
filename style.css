@@ -1,59 +1,78 @@
-.digit {
-  display: inline-block;
-  height: 10%;
-  width: 10%;
-  background-color: green;
-  color: white;
-  margin: 3%;
+body{
+  background-color: white;
+  font-family: 'Revalia', cursive;
 }
-.operation {
+#container {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-justify-content: center;
+  justify-content: center;
+  width: 20em;
+  margin: auto;
+  margin-top: 2em;
+  max-width: 95%;
+  background-color: black;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  border-radius: 5%;
+}
+#output {
+  display: inline-flex;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  width: 86%;
+  margin: 1%;
+  background-color: #38393F;
+  margin-bottom: 0.75em;
+}
+.button {
   display: inline-block;
-  height: 10%;
-  width: 10%;
-  background-color: red;
-  color: white;
-  margin: 3%;
+  height: 1.5em;
+  font-size: 1.5em;
+  width: 20%;
+  color: #FFCF48;
+  border-radius: 5%;
+  margin: 1%;
+  padding-top: .4em;
+  padding-bottom: .4em;
+  text-align: center;
+}
+.row1 {
+  background-color: #076D85;
+}
+.row2 {
+  background-color: #014791;
+}
+.row3 {
+  background-color: #05187A;
+}
+.row4 {
+  background-color: #17056E;
+}
+.row5 {
+  background-color: #330461;
 }
 #equals {
-  display: inline-block;
-  height: 10%;
-  width: 10%;
-  background-color: red;
-  color: white;
-  margin: 3%;
-}
-#point {
-  display: inline-block;
-  height: 10%;
-  width: 10%;
-  background-color: green;
-  color: white;
-  margin: 3%;
-}
-#toggle {
-  display: inline-block;
-  height: 10%;
-  width: 10%;
-  background-color: green;
-  color: white;
-  margin: 3%;
-}
-.clear {
-  display: inline-block;
-  height: 10%;
-  width: 10%;
-  background-color: blue;
-  color: white;
-  margin: 3%;
+  width: 42%;
 }
 .display {
-  display: block;
-  height: 10%;
   width: 25%;
-  background-color: black;
-  color: white;
-  margin: 3%;
+  background-color: #38393F;
+  color: #64EEFF;
+  margin: 1%;
+  overflow-x: scroll;
 }
-.op {
-  color:green;
+#input {
+  height: 1.1em;
+  width: 98%;
+  font-size: .75em;
+}
+#answer {
+  height: 1.2em;
+  width: 98%;
+  font-size: 2em;
 }

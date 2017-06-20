@@ -3,28 +3,33 @@
   <meta charset="UTF 8">
 	<meta name="viewport" content="width=device-width, initial-scale=1"/>
 	<link rel="stylesheet" type="text/css" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css?family=Revalia" rel="stylesheet">
 </head>
 <body>
-  <div class="digit" id="0">0</div>
-  <div class="digit" id="1">1</div>
-  <div class="digit" id="2">2</div>
-  <div class="digit" id="3">3</div>
-  <div class="digit" id="4">4</div>
-  <div class="digit" id="5">5</div>
-  <div class="digit" id="6">6</div>
-  <div class="digit" id="7">7</div>
-  <div class="digit" id="8">8</div>
-  <div class="digit" id="9">9</div>
-  <div id="point">.</div>
-  <div id="toggle">+/-</div>
-  <div class="operation" id="plus">+</div>
-  <div class="operation" id="minus">-</div>
-  <div class="operation" id="multiply">x</div>
-  <div class="operation" id="divide"> &divide; </div>
-  <div id="equals"> = </div>
-  <div class="clear" id="AC">AC</div>
-  <div class="clear" id="C">C</div>
-  <div class="display" id="input"></div>
-  <div class="display" id="answer"></div>
+  <div id="container">
+    <div id="output">
+      <div class="display" id="answer"></div>
+      <div class="display" id="input"></div>
+    </div>
+    <div class="button row1" id="AC">AC</div>
+    <div class="button row1" id="C">C</div>
+    <div class="button row1" id="toggle">+/-</div>
+    <div class="button row1" id="divide"> &divide; </div>
+    <div class="button row2" id="7">7</div>
+    <div class="button row2" id="8">8</div>
+    <div class="button row2" id="9">9</div>
+    <div class="button row2" id="multiply">x</div>
+    <div class="button row3" id="4">4</div>
+    <div class="button row3" id="5">5</div>
+    <div class="button row3" id="6">6</div>
+    <div class="button row3" id="minus">-</div>
+    <div class="button row4" id="1">1</div>
+    <div class="button row4" id="2">2</div>
+    <div class="button row4" id="3">3</div>
+    <div class="button row4" id="plus">+</div>
+    <div class="button row5" id="0">0</div>
+    <div class="button row5" id="point">.</div>
+    <div id="equals" class="button row5"> = </div>
+  </div>
   <script src="app.js"></script>
 </body>
