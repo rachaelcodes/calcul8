@@ -7,22 +7,22 @@ document.getElementById('1').addEventListener('click', function(event) {
     if (cleared === 0){clearDiv();}
     number+='1';
     document.getElementById('answer').appendChild(document.createTextNode('1'));
-  }, false);
+  });
   document.getElementById('2').addEventListener('click', function(event) {
     if (cleared === 0){clearDiv();}
     number+='2';
     document.getElementById('answer').appendChild(document.createTextNode('2'));
-  }, false);
+  };
 document.getElementById('3').addEventListener('click', function(event) {
     if (cleared === 0){clearDiv();}
     number+='3';
     document.getElementById('answer').appendChild(document.createTextNode('3'));
-  }, false);
+  });
 document.getElementById('4').addEventListener('click', function(event) {
     if (cleared === 0){clearDiv();}
     number+='4';
     document.getElementById('answer').appendChild(document.createTextNode('4'));
-  }, false);
+  });
 document.getElementById('5').addEventListener('click', function(event) {
     if (cleared === 0){clearDiv();}
     number+='5';
@@ -32,32 +32,32 @@ document.getElementById('6').addEventListener('click', function(event) {
     if (cleared === 0){clearDiv();}
     number+='6';
     document.getElementById('answer').appendChild(document.createTextNode('6'));
-  }, false);
+  });
 document.getElementById('7').addEventListener('click', function(event) {
     if (cleared === 0){clearDiv();}
     number+='7';
     document.getElementById('answer').appendChild(document.createTextNode('7'));
-  }, false);
+  });
 document.getElementById('8').addEventListener('click', function(event) {
     if (cleared === 0){clearDiv();}
     number+='8';
     document.getElementById('answer').appendChild(document.createTextNode('8'));
-  }, false);
+  });
 document.getElementById('9').addEventListener('click', function(event) {
     if (cleared === 0){clearDiv();}
     number+='9';
     document.getElementById('answer').appendChild(document.createTextNode('9'));
-  }, false);
+  });
 document.getElementById('0').addEventListener('click', function(event) {
     if (cleared === 0){clearDiv();}
     number+='0';
     document.getElementById('answer').appendChild(document.createTextNode('0'));
-  }, false);
+  });
 document.getElementById('point').addEventListener('click', function(event) {
     if (cleared === 0){clearDiv();}
     number+='.';
     document.getElementById('answer').appendChild(document.createTextNode('.'));
-  }, false);
+  });
 document.getElementById('toggle').addEventListener('click', function(event) {
     if (cleared === 0){clearDiv();}
       if ((parseFloat(number) > 0) || (number.length==0)){
@@ -69,7 +69,7 @@ document.getElementById('toggle').addEventListener('click', function(event) {
         number = number.slice(1);
           document.getElementById('answer').removeChild(document.getElementById('answer').firstChild);
       }
-    }, false);
+    });
 
 document.getElementById('plus').addEventListener('click', function(event) {
   if (number){
@@ -95,7 +95,7 @@ document.getElementById('plus').addEventListener('click', function(event) {
       del = 0;
       while (document.getElementById('answer').firstChild) {document.getElementById('answer').removeChild(document.getElementById('answer').firstChild)};
       }
-  }, false);
+  });
 document.getElementById('minus').addEventListener('click', function(event) {
   if (number){
       calculation.push(parseFloat(number));
@@ -120,7 +120,7 @@ document.getElementById('minus').addEventListener('click', function(event) {
         del = 0;
         while (document.getElementById('answer').firstChild) {document.getElementById('answer').removeChild(document.getElementById('answer').firstChild)};
         }
-  }, false);
+  });
 document.getElementById('multiply').addEventListener('click', function(event) {
   if (number){
       calculation.push(parseFloat(number));
@@ -145,7 +145,7 @@ document.getElementById('multiply').addEventListener('click', function(event) {
       del = 0;
       while (document.getElementById('answer').firstChild) {document.getElementById('answer').removeChild(document.getElementById('answer').firstChild)};
       }
-  }, false);
+  });
 document.getElementById('divide').addEventListener('click', function(event) {
   if (number){
       calculation.push(parseFloat(number));
@@ -170,14 +170,14 @@ document.getElementById('divide').addEventListener('click', function(event) {
       del = 0;
       while (document.getElementById('answer').firstChild) {document.getElementById('answer').removeChild(document.getElementById('answer').firstChild)};
       }
-  }, false);
+  });
 document.getElementById('AC').addEventListener('click', function(event){
   number = '';
   calculation = [];
   answer = 0;
   while (document.getElementById('input').firstChild) {document.getElementById('input').removeChild(document.getElementById('input').firstChild)};
   while (document.getElementById('answer').firstChild) {document.getElementById('answer').removeChild(document.getElementById('answer').firstChild)};
-}, false);
+});
 document.getElementById('C').addEventListener('click', function(event){
   if (number===''){
     calculation.pop();
@@ -189,7 +189,7 @@ document.getElementById('C').addEventListener('click', function(event){
     while (document.getElementById('answer').firstChild) {document.getElementById('answer').removeChild(document.getElementById('answer').firstChild)};
     del = 0;
   }
-}, false);
+});
 document.getElementById('equals').addEventListener('click', function(event) {
       if (number == '-'){number = ''}
       calculation.push(parseFloat(number));
@@ -204,7 +204,7 @@ document.getElementById('equals').addEventListener('click', function(event) {
       number = '';
       calculation=[];
       cleared = 0;
-    }, false);
+    });
 
 function calc(array) {
   if (number) {document.getElementById('input').appendChild(document.createTextNode(number));}
