@@ -12,7 +12,7 @@ document.getElementById('1').addEventListener('click', function(event) {
     if (cleared === 0){clearDiv();}
     number+='2';
     document.getElementById('answer').appendChild(document.createTextNode('2'));
-  };
+  });
 document.getElementById('3').addEventListener('click', function(event) {
     if (cleared === 0){clearDiv();}
     number+='3';
